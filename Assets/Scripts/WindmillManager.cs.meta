@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c36b82a4706f0434fa9599e805f181f5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - turbineDataContainer: {instanceID: 0}
+  - windmillBlades: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 63e2277b17365457ba447e2e1f0124da
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - csvFile: {fileID: 4900000, guid: dc17edc363cc14b048d8f35e52fc8e65, type: 3}
+  - turbineDataContainer: {fileID: 11400000, guid: 75206d53306edab4ca261c36a3d8f098,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
