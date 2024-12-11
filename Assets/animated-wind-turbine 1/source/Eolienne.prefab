@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823845563083471575}
   - component: {fileID: 380178745559867394}
+  - component: {fileID: 915290855961699479}
   m_Layer: 0
   m_Name: Eolienne
   m_TagString: Untagged
@@ -46,11 +47,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36b82a4706f0434fa9599e805f181f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turbineID: T98
+  turbineID: 
   turbineDataContainer: {fileID: 11400000, guid: 75206d53306edab4ca261c36a3d8f098,
     type: 2}
   windmillBlades: {fileID: 519542874318501614}
   rotationAxis: {x: 0, y: 1, z: 0}
+--- !u!114 &915290855961699479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130796350066238898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f14e1eb550b9a4fb6c0a2f0456845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _adjustOrientationForGlobeWhenMoving: 1
+  _detectTransformChanges: 1
+  _localToGlobeFixedMatrix:
+    c0:
+      x: 1
+      y: 0
+      z: 0
+      w: 0
+    c1:
+      x: 0
+      y: 1
+      z: 0
+      w: 0
+    c2:
+      x: 0
+      y: 0
+      z: 1
+      w: 0
+    c3:
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+  _localToGlobeFixedMatrixIsValid: 0
 --- !u!1 &6403152715888020624
 GameObject:
   m_ObjectHideFlags: 0

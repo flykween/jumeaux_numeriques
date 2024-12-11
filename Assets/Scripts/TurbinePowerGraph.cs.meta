@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 84a03148eb26d974794eb56c4e629417
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - graphChart: {instanceID: 0}
+  - turbineDataContainer: {fileID: 11400000, guid: 75206d53306edab4ca261c36a3d8f098,
+      type: 2}
+  - lineMaterial: {fileID: 2100000, guid: 292016a73bc065942801e66bb7caaf02, type: 2}
+  - pointMaterial: {fileID: 2100000, guid: 7c1a6c034977c19478d6047177a95460, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
