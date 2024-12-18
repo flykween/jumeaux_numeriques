@@ -4,8 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - turbineDataContainer: {instanceID: 0}
-  - windmillBlades: {instanceID: 0}
+  - turbineDataContainer: {fileID: 11400000, guid: 75206d53306edab4ca261c36a3d8f098,
+      type: 2}
+  - windmillBlades: {fileID: 1572452237337188096, guid: e131d0f59446a490da4a0c23e2c50dac,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
