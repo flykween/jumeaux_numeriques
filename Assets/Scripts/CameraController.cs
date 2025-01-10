@@ -6,9 +6,9 @@ using TMPro;
 public class CameraController : MonoBehaviour
 {
     public Transform cameraTransform; // Assignez la caméra à ce champ
-    public TurbineDataContainer turbineDataContainer; // Assignez votre conteneur de données
+    public TurbineDataContainer turbineDataContainer; // Assignez conteneur de données
     public TMP_Dropdown turbineDropdown; // Assignez le Dropdown pour la sélection des éoliennes
-    public Vector3 defaultCameraPosition = new Vector3(100, 50, -50); // Position fixe de la caméra
+    public Vector3 defaultCameraPosition = new Vector3(680, 893, -1000); // Position fixe de la caméra
     public Vector3 defaultCameraLookAt = Vector3.zero; // Point que la caméra regarde par défaut
 
     private void Start()
@@ -57,7 +57,7 @@ public class CameraController : MonoBehaviour
         Debug.Log($"Positioning camera to look at {selectedTurbineID}");
 
         // Positionner la caméra pour qu'elle regarde l'éolienne
-        Vector3 cameraPosition = selectedTurbineObject.transform.position + new Vector3(150, 80, -10); // Ajustez cette position selon vos besoins
+        Vector3 cameraPosition = selectedTurbineObject.transform.position + new Vector3(150, 80, -10); // Ajustez cette position 
         cameraTransform.position = cameraPosition;
         cameraTransform.LookAt(selectedTurbineObject.transform);
     }

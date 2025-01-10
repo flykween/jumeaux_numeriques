@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TurbineDataLogger : MonoBehaviour
 {
-    public TurbineDataContainer turbineDataContainer; // Assignez votre conteneur de données
+    public TurbineDataContainer turbineDataContainer; 
 
     void Start()
     {

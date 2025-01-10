@@ -3,7 +3,15 @@ guid: 868c1397835c49d4894adf17a99a2bab
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - turbineDataContainer: {fileID: 11400000, guid: 75206d53306edab4ca261c36a3d8f098,
+      type: 2}
+  - timeText: {instanceID: 0}
+  - temperatureText: {instanceID: 0}
+  - rotorSpeedText: {instanceID: 0}
+  - powerText: {instanceID: 0}
+  - turbineDropdown: {instanceID: 0}
+  - timeSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

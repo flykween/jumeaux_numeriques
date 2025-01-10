@@ -6,8 +6,8 @@ using TMPro;
 
 public class TurbinePowerGraph : MonoBehaviour
 {
-    public GraphChart graphChart; // Assignez votre graphique dans l'inspecteur
-    public TurbineDataContainer turbineDataContainer; // Assignez votre conteneur de données
+    public GraphChart graphChart; // Assignez graphique dans l'inspecteur
+    public TurbineDataContainer turbineDataContainer; // Assignez conteneur de données
     public List<string> turbineIDs; // Liste des IDs des éoliennes à afficher
     public Material lineMaterial; // Matériau pour la ligne du graphique
     public Material pointMaterial; // Matériau pour les points du graphique

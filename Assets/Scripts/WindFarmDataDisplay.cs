@@ -6,7 +6,7 @@ using TMPro;
 
 public class WindFarmDataDisplay : MonoBehaviour
 {
-    public TurbineDataContainer turbineDataContainer; // Assignez votre conteneur de données
+    public TurbineDataContainer turbineDataContainer; // Assignez conteneur de données
     public TextMeshProUGUI timeText; // Assignez le texte pour l'heure
     public TextMeshProUGUI temperatureText; // Assignez le texte pour la température
     public TextMeshProUGUI rotorSpeedText; // Assignez le texte pour la vitesse des rotors
