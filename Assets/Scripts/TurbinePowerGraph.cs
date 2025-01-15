@@ -27,7 +27,7 @@ public class TurbinePowerGraph : MonoBehaviour
 
         // Configurer le slider
         timeSlider.minValue = 0;
-        timeSlider.maxValue = turbineDataContainer.turbines[0].timeIntervals.Length - 1;
+        timeSlider.maxValue = 143; // 144 intervalles de 10 minutes dans une journée
         timeSlider.onValueChanged.AddListener(UpdatePowerText);
 
         // Ajouter la catégorie "Power" si elle n'existe pas
@@ -44,11 +44,11 @@ public class TurbinePowerGraph : MonoBehaviour
 
     void UpdateGraph()
     {
-        // Dictionnaire pour stocker la somme des puissances par heure
+        // Dictionnaire pour stocker la somme des puissances par intervalle de 10 minutes
         Dictionary<int, float> powerSums = new Dictionary<int, float>();
 
-        // Initialiser le dictionnaire pour chaque heure de 0 à 23
-        for (int i = 0; i < 24; i++)
+        // Initialiser le dictionnaire pour chaque intervalle de 10 minutes
+        for (int i = 0; i < 144; i++)
         {
             powerSums[i] = 0f;
         }
@@ -66,10 +66,10 @@ public class TurbinePowerGraph : MonoBehaviour
             // Ajouter les puissances pour chaque intervalle de temps
             for (int i = 0; i < turbineData.timeIntervals.Length; i++)
             {
-                int hour = GetHourFromTimeInterval(turbineData.timeIntervals[i]);
-                if (hour >= 0 && hour < 24)
+                int interval = GetIntervalFromTimeInterval(turbineData.timeIntervals[i]);
+                if (interval >= 0 && interval < 144)
                 {
-                    powerSums[hour] += turbineData.powers[i];
+                    powerSums[interval] += turbineData.powers[i];
                 }
             }
         }
@@ -77,9 +77,9 @@ public class TurbinePowerGraph : MonoBehaviour
         // Ajouter les points au graphique
         graphChart.DataSource.StartBatch();
         graphChart.DataSource.ClearCategory("Power");
-        for (int i = 0; i < 24; i++)
+        for (int i = 0; i < 144; i++)
         {
-            graphChart.DataSource.AddPointToCategory("Power", i + 1, powerSums[i]); // Utiliser i + 1 pour que l'axe X commence à 1
+            graphChart.DataSource.AddPointToCategory("Power", i, powerSums[i]);
         }
         graphChart.DataSource.EndBatch();
     }
@@ -103,18 +103,18 @@ public class TurbinePowerGraph : MonoBehaviour
         powerText.text = $"Puissance Totale: {totalPower} kW";
     }
 
-    int GetHourFromTimeInterval(string timeInterval)
+    int GetIntervalFromTimeInterval(string timeInterval)
     {
-        // Extraire l'heure de début de l'intervalle de temps (format "HH:mm-HH:mm")
+        // Extraire l'heure et les minutes de début de l'intervalle de temps (format "HH:mm-HH:mm")
         string[] parts = timeInterval.Split('-');
         if (parts.Length > 0)
         {
             string[] timeParts = parts[0].Split(':');
-            if (timeParts.Length > 0 && int.TryParse(timeParts[0], out int hour))
+            if (timeParts.Length == 2 && int.TryParse(timeParts[0], out int hour) && int.TryParse(timeParts[1], out int minute))
             {
-                return hour;
+                return hour * 6 + minute / 10;
             }
         }
-        return -1; // Retourner -1 si l'heure n'a pas pu être extraite
+        return -1; // Retourner -1 si l'intervalle n'a pas pu être extrait
     }
 }
